@@ -1,0 +1,60 @@
+x-queue: &queue
+  build: .
+  image: training-queue:local
+  environment:
+    QUEUE_DB: /data/queue.sqlite3
+    QUEUE_DATABASE_URL: ${QUEUE_DATABASE_URL-postgresql://queue:queue@db:5432/queue}
+    QUEUE_INTERNAL_TOKEN: ${QUEUE_INTERNAL_TOKEN:-}
+  volumes:
+    - queue-data:/data
+  restart: unless-stopped
+
+services:
+  redis:
+    image: redis:8-alpine
+    ports:
+      - "127.0.0.1:${QUEUE_REDIS_PORT:-56379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: queue
+      POSTGRES_USER: queue
+      POSTGRES_PASSWORD: queue
+    ports:
+      - "127.0.0.1:${QUEUE_POSTGRES_PORT:-55432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "queue", "-d", "queue"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+  api:
+    <<: *queue
+    command: python -m uvicorn training_queue.api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "127.0.0.1:${QUEUE_API_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://localhost:8000/healthz', timeout=2).close()"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+  worker:
+    <<: *queue
+    command: python -m training_queue.worker
+    scale: 4
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  queue-data:
+  postgres-data:

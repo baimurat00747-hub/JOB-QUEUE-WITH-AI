@@ -1,0 +1,428 @@
+ Image training-queue:local Building
+ Image training-queue:local Building
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.01kB done
+#1 DONE 0.0s
+
+#2 [api internal] load build definition from Dockerfile
+#2 transferring dockerfile: 227B done
+#2 DONE 0.0s
+
+#3 [api internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 3.6s
+
+#4 [api internal] load .dockerignore
+#4 transferring context: 82B done
+#4 DONE 0.0s
+
+#5 [api internal] load build context
+#5 transferring context: 222B done
+#5 DONE 0.0s
+
+#6 [worker 1/5] FROM docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+#6 resolve docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b done
+#6 DONE 0.0s
+
+#7 [worker 3/5] COPY requirements.txt .
+#7 CACHED
+
+#8 [worker 2/5] WORKDIR /app
+#8 CACHED
+
+#9 [worker 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [api 5/5] COPY training_queue ./training_queue
+#10 CACHED
+
+#11 [worker] exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:75ad88dd2e7bb8633a069318d9067239038485ef8b49649f5b3c5389d59700f2 done
+#11 exporting config sha256:d5a6668bbe9ff71fa498bbbf528189e38c864ff8357964b61ff17cf4c93530af done
+#11 exporting attestation manifest sha256:4774c93c295bdfb24fd48e9850022d3a7921876d92e4f1924d8e1ff269dc966c 0.0s done
+#11 exporting manifest list sha256:3169bb580eec7a99f8aa533d5cb75d090bdb6b7c0bab17373c51a64fa98b396f done
+#11 naming to docker.io/library/training-queue:local done
+#11 unpacking to docker.io/library/training-queue:local done
+#11 DONE 0.0s
+
+#12 [api] exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:39e8b87ab3ff89b172114dad546a51cf155e10e435387d5f08c752cb4d9a8738 done
+#12 exporting config sha256:33b30ea7f814848d5bf1ec9589da10a2b14b3a589a2c565e8e36b7db7fab5505 done
+#12 exporting attestation manifest sha256:eb18cb325c64c04af80b764ff65a7e0f027a1889560269985dcba4a4c939989e 0.0s done
+#12 exporting manifest list sha256:5537b19484f28606fe8ee86504a4ad6a4f726415a3c325cca33ec769b929f3b9 done
+#12 naming to docker.io/library/training-queue:local done
+#12 unpacking to docker.io/library/training-queue:local done
+#12 DONE 0.1s
+
+#13 [worker] resolving provenance for metadata file
+#13 DONE 0.0s
+
+#14 [api] resolving provenance for metadata file
+#14 DONE 0.0s
+ Image training-queue:local Built
+ Image training-queue:local Built
+ Network queue-tuned-1000-32-1794497528_default Creating
+ Network queue-tuned-1000-32-1794497528_default Created
+ Volume queue-tuned-1000-32-1794497528_queue-data Creating
+ Volume queue-tuned-1000-32-1794497528_queue-data Created
+ Container queue-tuned-1000-32-1794497528-api-1 Creating
+ Container queue-tuned-1000-32-1794497528-api-1 Created
+ Container queue-tuned-1000-32-1794497528-worker-7 Creating
+ Container queue-tuned-1000-32-1794497528-worker-22 Creating
+ Container queue-tuned-1000-32-1794497528-worker-30 Creating
+ Container queue-tuned-1000-32-1794497528-worker-14 Creating
+ Container queue-tuned-1000-32-1794497528-worker-26 Creating
+ Container queue-tuned-1000-32-1794497528-worker-25 Creating
+ Container queue-tuned-1000-32-1794497528-worker-21 Creating
+ Container queue-tuned-1000-32-1794497528-worker-13 Creating
+ Container queue-tuned-1000-32-1794497528-worker-24 Creating
+ Container queue-tuned-1000-32-1794497528-worker-9 Creating
+ Container queue-tuned-1000-32-1794497528-worker-23 Creating
+ Container queue-tuned-1000-32-1794497528-worker-17 Creating
+ Container queue-tuned-1000-32-1794497528-worker-3 Creating
+ Container queue-tuned-1000-32-1794497528-worker-8 Creating
+ Container queue-tuned-1000-32-1794497528-worker-18 Creating
+ Container queue-tuned-1000-32-1794497528-worker-32 Creating
+ Container queue-tuned-1000-32-1794497528-worker-29 Creating
+ Container queue-tuned-1000-32-1794497528-worker-28 Creating
+ Container queue-tuned-1000-32-1794497528-worker-31 Creating
+ Container queue-tuned-1000-32-1794497528-worker-27 Creating
+ Container queue-tuned-1000-32-1794497528-worker-16 Creating
+ Container queue-tuned-1000-32-1794497528-worker-15 Creating
+ Container queue-tuned-1000-32-1794497528-worker-11 Creating
+ Container queue-tuned-1000-32-1794497528-worker-1 Creating
+ Container queue-tuned-1000-32-1794497528-worker-4 Creating
+ Container queue-tuned-1000-32-1794497528-worker-5 Creating
+ Container queue-tuned-1000-32-1794497528-worker-2 Creating
+ Container queue-tuned-1000-32-1794497528-worker-6 Creating
+ Container queue-tuned-1000-32-1794497528-worker-20 Creating
+ Container queue-tuned-1000-32-1794497528-worker-19 Creating
+ Container queue-tuned-1000-32-1794497528-worker-10 Creating
+ Container queue-tuned-1000-32-1794497528-worker-12 Creating
+ Container queue-tuned-1000-32-1794497528-worker-11 Created
+ Container queue-tuned-1000-32-1794497528-worker-1 Created
+ Container queue-tuned-1000-32-1794497528-worker-20 Created
+ Container queue-tuned-1000-32-1794497528-worker-15 Created
+ Container queue-tuned-1000-32-1794497528-worker-8 Created
+ Container queue-tuned-1000-32-1794497528-worker-22 Created
+ Container queue-tuned-1000-32-1794497528-worker-24 Created
+ Container queue-tuned-1000-32-1794497528-worker-21 Created
+ Container queue-tuned-1000-32-1794497528-worker-5 Created
+ Container queue-tuned-1000-32-1794497528-worker-26 Created
+ Container queue-tuned-1000-32-1794497528-worker-10 Created
+ Container queue-tuned-1000-32-1794497528-worker-19 Created
+ Container queue-tuned-1000-32-1794497528-worker-18 Created
+ Container queue-tuned-1000-32-1794497528-worker-9 Created
+ Container queue-tuned-1000-32-1794497528-worker-17 Created
+ Container queue-tuned-1000-32-1794497528-worker-29 Created
+ Container queue-tuned-1000-32-1794497528-worker-3 Created
+ Container queue-tuned-1000-32-1794497528-worker-25 Created
+ Container queue-tuned-1000-32-1794497528-worker-30 Created
+ Container queue-tuned-1000-32-1794497528-worker-2 Created
+ Container queue-tuned-1000-32-1794497528-worker-7 Created
+ Container queue-tuned-1000-32-1794497528-worker-31 Created
+ Container queue-tuned-1000-32-1794497528-worker-28 Created
+ Container queue-tuned-1000-32-1794497528-worker-14 Created
+ Container queue-tuned-1000-32-1794497528-worker-6 Created
+ Container queue-tuned-1000-32-1794497528-worker-27 Created
+ Container queue-tuned-1000-32-1794497528-worker-12 Created
+ Container queue-tuned-1000-32-1794497528-worker-4 Created
+ Container queue-tuned-1000-32-1794497528-worker-23 Created
+ Container queue-tuned-1000-32-1794497528-worker-13 Created
+ Container queue-tuned-1000-32-1794497528-worker-16 Created
+ Container queue-tuned-1000-32-1794497528-worker-32 Created
+ Container queue-tuned-1000-32-1794497528-api-1 Starting
+ Container queue-tuned-1000-32-1794497528-api-1 Started
+ Container queue-tuned-1000-32-1794497528-api-1 Waiting
+ Container queue-tuned-1000-32-1794497528-api-1 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-13 Starting
+ Container queue-tuned-1000-32-1794497528-worker-13 Started
+ Container queue-tuned-1000-32-1794497528-worker-16 Starting
+ Container queue-tuned-1000-32-1794497528-worker-16 Started
+ Container queue-tuned-1000-32-1794497528-worker-23 Starting
+ Container queue-tuned-1000-32-1794497528-worker-23 Started
+ Container queue-tuned-1000-32-1794497528-worker-4 Starting
+ Container queue-tuned-1000-32-1794497528-worker-4 Started
+ Container queue-tuned-1000-32-1794497528-worker-6 Starting
+ Container queue-tuned-1000-32-1794497528-worker-6 Started
+ Container queue-tuned-1000-32-1794497528-worker-14 Starting
+ Container queue-tuned-1000-32-1794497528-worker-14 Started
+ Container queue-tuned-1000-32-1794497528-worker-32 Starting
+ Container queue-tuned-1000-32-1794497528-worker-32 Started
+ Container queue-tuned-1000-32-1794497528-worker-27 Starting
+ Container queue-tuned-1000-32-1794497528-worker-27 Started
+ Container queue-tuned-1000-32-1794497528-worker-12 Starting
+ Container queue-tuned-1000-32-1794497528-worker-12 Started
+ Container queue-tuned-1000-32-1794497528-worker-21 Starting
+ Container queue-tuned-1000-32-1794497528-worker-21 Started
+ Container queue-tuned-1000-32-1794497528-worker-28 Starting
+ Container queue-tuned-1000-32-1794497528-worker-28 Started
+ Container queue-tuned-1000-32-1794497528-worker-31 Starting
+ Container queue-tuned-1000-32-1794497528-worker-31 Started
+ Container queue-tuned-1000-32-1794497528-worker-5 Starting
+ Container queue-tuned-1000-32-1794497528-worker-5 Started
+ Container queue-tuned-1000-32-1794497528-worker-2 Starting
+ Container queue-tuned-1000-32-1794497528-worker-2 Started
+ Container queue-tuned-1000-32-1794497528-worker-10 Starting
+ Container queue-tuned-1000-32-1794497528-worker-10 Started
+ Container queue-tuned-1000-32-1794497528-worker-3 Starting
+ Container queue-tuned-1000-32-1794497528-worker-3 Started
+ Container queue-tuned-1000-32-1794497528-worker-26 Starting
+ Container queue-tuned-1000-32-1794497528-worker-26 Started
+ Container queue-tuned-1000-32-1794497528-worker-30 Starting
+ Container queue-tuned-1000-32-1794497528-worker-30 Started
+ Container queue-tuned-1000-32-1794497528-worker-7 Starting
+ Container queue-tuned-1000-32-1794497528-worker-7 Started
+ Container queue-tuned-1000-32-1794497528-worker-9 Starting
+ Container queue-tuned-1000-32-1794497528-worker-9 Started
+ Container queue-tuned-1000-32-1794497528-worker-24 Starting
+ Container queue-tuned-1000-32-1794497528-worker-24 Started
+ Container queue-tuned-1000-32-1794497528-worker-18 Starting
+ Container queue-tuned-1000-32-1794497528-worker-18 Started
+ Container queue-tuned-1000-32-1794497528-worker-19 Starting
+ Container queue-tuned-1000-32-1794497528-worker-19 Started
+ Container queue-tuned-1000-32-1794497528-worker-17 Starting
+ Container queue-tuned-1000-32-1794497528-worker-17 Started
+ Container queue-tuned-1000-32-1794497528-worker-29 Starting
+ Container queue-tuned-1000-32-1794497528-worker-29 Started
+ Container queue-tuned-1000-32-1794497528-worker-25 Starting
+ Container queue-tuned-1000-32-1794497528-worker-25 Started
+ Container queue-tuned-1000-32-1794497528-worker-11 Starting
+ Container queue-tuned-1000-32-1794497528-worker-11 Started
+ Container queue-tuned-1000-32-1794497528-worker-20 Starting
+ Container queue-tuned-1000-32-1794497528-worker-20 Started
+ Container queue-tuned-1000-32-1794497528-worker-15 Starting
+ Container queue-tuned-1000-32-1794497528-worker-15 Started
+ Container queue-tuned-1000-32-1794497528-worker-8 Starting
+ Container queue-tuned-1000-32-1794497528-worker-8 Started
+ Container queue-tuned-1000-32-1794497528-worker-22 Starting
+ Container queue-tuned-1000-32-1794497528-worker-22 Started
+ Container queue-tuned-1000-32-1794497528-worker-1 Starting
+ Container queue-tuned-1000-32-1794497528-worker-1 Started
+ Container queue-tuned-1000-32-1794497528-api-1 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-13 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-16 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-23 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-4 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-6 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-14 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-32 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-27 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-12 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-21 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-28 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-31 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-5 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-2 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-10 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-3 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-26 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-30 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-7 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-9 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-24 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-18 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-19 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-17 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-29 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-25 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-11 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-20 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-15 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-8 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-22 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-1 Waiting
+ Container queue-tuned-1000-32-1794497528-worker-13 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-16 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-23 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-4 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-6 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-14 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-32 Healthy
+ Container queue-tuned-1000-32-1794497528-api-1 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-27 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-12 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-21 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-28 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-31 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-5 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-2 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-10 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-3 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-26 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-30 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-7 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-9 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-24 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-18 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-19 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-17 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-29 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-25 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-11 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-20 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-15 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-8 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-22 Healthy
+ Container queue-tuned-1000-32-1794497528-worker-1 Healthy
+Running Compose workers:       32
+Target: 1000 HTTP requests/s for 15s, workers=32, clients=48
+t=0.00s unfinished=0 queued=0 running=0 succeeded=0 cancelled=0
+t=5.00s unfinished=27 queued=1 running=26 succeeded=1982 cancelled=490
+t=10.01s unfinished=26 queued=2 running=24 succeeded=3990 cancelled=984
+After all client responses: {'cancelled': 1478, 'running': 15, 'succeeded': 6007}
+Scheduled: 15000, successful: 15000
+Requests started in 15s: 14977 (998.47/s)
+Successful responses in 15s: 14973
+Successful responses/s in window: 998.20
+Errors: 0, categories: {}
+Error examples: []
+Window 0–5s: starts=4996 successes=4994 HTTP 503=0
+Window 5–10s: starts=4992 successes=4992 HTTP 503=0
+Window 10–15s: starts=4989 successes=4987 HTTP 503=0
+HTTP latency p95=11.8 ms, p99=85.4 ms
+Client dispatch delay p95=23.3 ms
+Drain after last response: 0.20s
+Expected keys: 7500, jobs in DB: 7500
+Missing: 0, examples: []
+Extra: 0, examples: []
+Duplicate jobs: 0
+Invalid state or effect count: 0, examples: []
+ Container queue-tuned-1000-32-1794497528-worker-6 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-16 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-11 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-24 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-27 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-15 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-1 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-17 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-25 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-12 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-18 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-13 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-29 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-8 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-26 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-19 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-20 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-21 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-7 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-23 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-30 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-4 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-22 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-31 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-14 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-9 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-5 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-2 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-28 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-3 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-32 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-10 Stopping
+ Container queue-tuned-1000-32-1794497528-worker-6 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-6 Removing
+ Container queue-tuned-1000-32-1794497528-worker-6 Removed
+ Container queue-tuned-1000-32-1794497528-worker-1 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-1 Removing
+ Container queue-tuned-1000-32-1794497528-worker-1 Removed
+ Container queue-tuned-1000-32-1794497528-worker-23 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-23 Removing
+ Container queue-tuned-1000-32-1794497528-worker-23 Removed
+ Container queue-tuned-1000-32-1794497528-worker-12 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-12 Removing
+ Container queue-tuned-1000-32-1794497528-worker-12 Removed
+ Container queue-tuned-1000-32-1794497528-worker-28 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-28 Removing
+ Container queue-tuned-1000-32-1794497528-worker-28 Removed
+ Container queue-tuned-1000-32-1794497528-worker-7 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-7 Removing
+ Container queue-tuned-1000-32-1794497528-worker-7 Removed
+ Container queue-tuned-1000-32-1794497528-worker-11 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-11 Removing
+ Container queue-tuned-1000-32-1794497528-worker-11 Removed
+ Container queue-tuned-1000-32-1794497528-worker-8 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-8 Removing
+ Container queue-tuned-1000-32-1794497528-worker-8 Removed
+ Container queue-tuned-1000-32-1794497528-worker-19 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-19 Removing
+ Container queue-tuned-1000-32-1794497528-worker-19 Removed
+ Container queue-tuned-1000-32-1794497528-worker-15 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-15 Removing
+ Container queue-tuned-1000-32-1794497528-worker-15 Removed
+ Container queue-tuned-1000-32-1794497528-worker-5 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-5 Removing
+ Container queue-tuned-1000-32-1794497528-worker-5 Removed
+ Container queue-tuned-1000-32-1794497528-worker-30 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-30 Removing
+ Container queue-tuned-1000-32-1794497528-worker-30 Removed
+ Container queue-tuned-1000-32-1794497528-worker-22 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-22 Removing
+ Container queue-tuned-1000-32-1794497528-worker-22 Removed
+ Container queue-tuned-1000-32-1794497528-worker-9 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-9 Removing
+ Container queue-tuned-1000-32-1794497528-worker-9 Removed
+ Container queue-tuned-1000-32-1794497528-worker-32 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-32 Removing
+ Container queue-tuned-1000-32-1794497528-worker-32 Removed
+ Container queue-tuned-1000-32-1794497528-worker-20 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-20 Removing
+ Container queue-tuned-1000-32-1794497528-worker-20 Removed
+ Container queue-tuned-1000-32-1794497528-worker-10 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-10 Removing
+ Container queue-tuned-1000-32-1794497528-worker-10 Removed
+ Container queue-tuned-1000-32-1794497528-worker-21 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-21 Removing
+ Container queue-tuned-1000-32-1794497528-worker-21 Removed
+ Container queue-tuned-1000-32-1794497528-worker-27 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-27 Removing
+ Container queue-tuned-1000-32-1794497528-worker-27 Removed
+ Container queue-tuned-1000-32-1794497528-worker-16 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-16 Removing
+ Container queue-tuned-1000-32-1794497528-worker-16 Removed
+ Container queue-tuned-1000-32-1794497528-worker-26 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-26 Removing
+ Container queue-tuned-1000-32-1794497528-worker-26 Removed
+ Container queue-tuned-1000-32-1794497528-worker-3 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-3 Removing
+ Container queue-tuned-1000-32-1794497528-worker-3 Removed
+ Container queue-tuned-1000-32-1794497528-worker-18 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-18 Removing
+ Container queue-tuned-1000-32-1794497528-worker-18 Removed
+ Container queue-tuned-1000-32-1794497528-worker-31 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-31 Removing
+ Container queue-tuned-1000-32-1794497528-worker-31 Removed
+ Container queue-tuned-1000-32-1794497528-worker-25 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-25 Removing
+ Container queue-tuned-1000-32-1794497528-worker-25 Removed
+ Container queue-tuned-1000-32-1794497528-worker-17 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-17 Removing
+ Container queue-tuned-1000-32-1794497528-worker-17 Removed
+ Container queue-tuned-1000-32-1794497528-worker-14 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-14 Removing
+ Container queue-tuned-1000-32-1794497528-worker-14 Removed
+ Container queue-tuned-1000-32-1794497528-worker-13 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-13 Removing
+ Container queue-tuned-1000-32-1794497528-worker-13 Removed
+ Container queue-tuned-1000-32-1794497528-worker-29 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-29 Removing
+ Container queue-tuned-1000-32-1794497528-worker-29 Removed
+ Container queue-tuned-1000-32-1794497528-worker-4 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-4 Removing
+ Container queue-tuned-1000-32-1794497528-worker-4 Removed
+ Container queue-tuned-1000-32-1794497528-worker-2 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-2 Removing
+ Container queue-tuned-1000-32-1794497528-worker-2 Removed
+ Container queue-tuned-1000-32-1794497528-worker-24 Stopped
+ Container queue-tuned-1000-32-1794497528-worker-24 Removing
+ Container queue-tuned-1000-32-1794497528-worker-24 Removed
+ Container queue-tuned-1000-32-1794497528-api-1 Stopping
+ Container queue-tuned-1000-32-1794497528-api-1 Stopped
+ Container queue-tuned-1000-32-1794497528-api-1 Removing
+ Container queue-tuned-1000-32-1794497528-api-1 Removed
+ Volume queue-tuned-1000-32-1794497528_queue-data Removing
+ Network queue-tuned-1000-32-1794497528_default Removing
+ Volume queue-tuned-1000-32-1794497528_queue-data Removed
+ Network queue-tuned-1000-32-1794497528_default Removed
+Exit code: 0

@@ -1,0 +1,36 @@
+loki.source.file "queue_agent" {
+  targets = [{
+    __path__ = "/var/log/queue-agent/agent.jsonl",
+    service  = "queue-agent",
+  }]
+  forward_to = [loki.process.queue_agent.receiver]
+
+  file_match {
+    enabled     = true
+    sync_period = "2s"
+  }
+}
+
+loki.process "queue_agent" {
+  forward_to = [loki.write.local.receiver]
+
+  stage.json {
+    expressions = { event_time = "timestamp" }
+  }
+
+  stage.timestamp {
+    source            = "event_time"
+    format            = "RFC3339Nano"
+    action_on_failure = "skip"
+  }
+
+  stage.label_drop {
+    values = ["filename"]
+  }
+}
+
+loki.write "local" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}
